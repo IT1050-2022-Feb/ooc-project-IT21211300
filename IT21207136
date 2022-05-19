@@ -1,0 +1,60 @@
+// Vote and reults IT21207136 Mendis T.S.P
+class Vote
+{
+	private:
+	int voteId;
+	float timeVoted;
+	Voter *Vter2;
+	VoteDetails *votedtils[3];
+	
+	public:
+		Vote();
+		Vote(int vid , float tVoted);
+		void submitVote();
+		void cancelVote();
+		void includeVotedetails( VoteDetails *VD1,  VoteDetails *VD2,  VoteDetails *VD3 );		
+	
+};
+
+void Vote::includeVotedetails( VoteDetails *VD1,  VoteDetails *VD2,  VoteDetails *VD3 )
+{
+	votedtils[0] =  VD1;
+	votedtils[1] =  VD2;
+	votedtils[2] =  VD3;
+}
+
+
+
+Vote::Vote()
+{
+   voteId=0;
+   timeVoted=0.0;		
+}
+
+
+Vote::Vote(  int Vid   , float  tVoted     )
+{
+
+			voteId = Vid;
+			timeVoted = tVoted; 
+}
+
+
+void Vote::submitVote()
+{
+	
+}
+void Vote::cancelVote()
+{
+	
+}
+
+class Results
+{
+	private:
+		VoteDetails *vdtls2;	
+	public:
+      void displayResult();
+	
+};
+
