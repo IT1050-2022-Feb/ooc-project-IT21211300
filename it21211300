@@ -1,1 +1,97 @@
-//
+// IT21211300 - Siriwardana L.H.E.R
+
+//user class and its implementation
+class User
+{
+	protected:
+	string userId;
+	string password;
+	string loginStatus; 
+	  
+	  public:
+	   void verifyLogin();  
+	   User();
+	   User(string Uid ,  string pwd  , string lognstus);
+	   ~User();
+};
+
+User::User()
+{
+       	
+}
+
+User::User(string Uid ,  string pwd  , string lognstus)
+{
+	userId = Uid;
+	password = pwd;
+	loginStatus	 = lognstus;
+}
+
+  User::~User()
+{
+	cout<< "user deleted";
+}
+
+void User:: verifyLogin()
+{
+	cout << "verify login";
+}
+
+// voter class and its implementation
+
+class Voter : public User
+{
+	private:
+		string VoterName;
+		string Voteremail;
+		int phonenumber;
+		Feedback *fdbk[];
+		string dob;
+		Vote *vote1;
+	
+		
+		
+	public:
+		Voter();
+		Voter(string Vname, string Vmail, int Vpnumber, string db);		
+		void Vregister();
+		void login();
+		void updateProfile();
+	
+};
+
+void Voter :: Vregister()
+{
+	
+}
+
+void Voter :: login()
+{
+	
+}
+
+void Voter :: updateProfile()
+{
+	
+}
+
+Voter :: Voter()
+{
+	
+}
+
+
+
+   Voter :: Voter(string Vname, string Vmail, int Vpnumber, string db)
+{
+		VoterName = Vname;
+		Voteremail = Vmail;
+		phonenumber = Vpnumber;	
+		dob  = db;
+}
+
+
+
+
+
+
