@@ -1,0 +1,38 @@
+//      contestants page and its implementation- IT21205842  Jayaweera J.R 
+
+class Contestants
+{
+	private:
+	string contestantId;
+	string contestantName;
+	int votenumber;
+	
+	
+	
+	
+	
+	public:
+		void addContestants();
+		void removeContestants();
+	Contestants();
+	Contestants(string cid, string cname, int cvnumber);
+	
+		
+};
+
+
+
+Contestants ::	Contestants()
+{
+	
+}
+
+Contestants :: Contestants(string cid, string cname, int cvnumber)
+{
+	
+	contestantId = cid;
+	contestantName = cname;
+	votenumber = cvnumber;
+	
+	
+}
