@@ -1,0 +1,78 @@
+// Admin class and its implemnetation - IT21387494 Dhananjaya A.K.G.S 
+class Admin : public User
+
+{
+	private:
+		string adminName ;
+		string adminemail;
+	
+	public:
+		Admin();
+		Admin( string adnme , string ademail); 
+		void uploadCatalog();
+		void adjustVotingtime();	
+		
+};
+
+Admin::Admin()
+{
+	
+}
+
+Admin::Admin( string adnme , string ademail)
+{
+	 adminName=adnme;
+	adminemail =ademail;
+}
+
+void Admin::uploadCatalog()
+{
+	
+}
+
+void Admin::adjustVotingtime()
+{
+	
+}
+
+
+
+class Feedback
+{
+	private:
+			int feedbackid;
+			Voter *Vter1;
+			
+	public:
+			Feedback();
+			Feedback(int fid);
+			void checkreply();
+			void viewfeedback();
+			void submitfeedback();			
+};
+
+
+Feedback::Feedback()
+{
+	feedbackid = 0;
+}
+
+Feedback::Feedback(int fid)
+{
+	feedbackid =  fid;
+}
+
+void Feedback::checkreply()
+{
+	
+}
+
+void Feedback::submitfeedback()
+{
+	
+}
+
+void Feedback::viewfeedback()
+{
+	
+}
