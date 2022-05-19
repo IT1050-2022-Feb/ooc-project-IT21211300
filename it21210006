@@ -1,0 +1,44 @@
+//class VoteDetails its implementation and main program
+//IT21210006
+
+class VoteDetails
+{
+	private: 
+	int Quantity;
+	
+	public:
+	voteDetails(); 
+	Contestants *cont1;
+	void catogorizeVote();
+	void CalcTotalCount();	
+};
+
+
+VoteDetalis ()
+{
+	
+}
+
+
+void VoteDetails::catogorizeVote()
+{
+	
+}
+
+
+
+int main()
+{
+	User u1;
+	Admin a1;
+	Voter vtr1;
+	Feedback f1;
+	Vote v1;
+	VoteDetails vtdetls;
+	Contestants c1;
+	
+	
+	
+	return 0;
+}
+
