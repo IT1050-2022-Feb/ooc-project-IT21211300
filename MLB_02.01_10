@@ -1,0 +1,396 @@
+#include<iostream>
+#include<cstring>
+#define SIZE 2; 
+using namespace std;
+
+// User Class and its implementation - IT21211300 Siriwardana L.H.E.R
+class User
+{
+	protected:
+	string userId;
+	string password;
+	string loginStatus; 
+	  
+	  public:
+	   void verifyLogin();  
+	   User();
+	   User(string Uid ,  string pwd  , string lognstus);
+	   ~User();
+};
+
+User::User()
+{
+       	
+}
+
+User::User(string Uid ,  string pwd  , string lognstus)
+{
+	userId = Uid;
+	password = pwd;
+	loginStatus	 = lognstus;
+}
+
+  User::~User()
+{
+	cout<< "user deleted";
+}
+
+void User:: verifyLogin()
+{
+	cout << "verify login";
+}
+
+
+
+
+
+// Admin class and its implemnetation - IT21387494 Dhananjaya A.K.G.S 
+class Admin : public User
+
+{
+	private:
+		string adminName ;
+		string adminemail;
+	
+	public:
+		Admin();
+		Admin( string adnme , string ademail); 
+		void uploadCatalog();
+		void adjustVotingtime();	
+		
+};
+
+Admin::Admin()
+{
+	
+}
+
+Admin::Admin( string adnme , string ademail)
+{
+	 adminName=adnme;
+	adminemail =ademail;
+}
+
+void Admin::uploadCatalog()
+{
+	
+}
+
+void Admin::adjustVotingtime()
+{
+	
+}
+
+
+
+// voter Class and its implementation - IT21211300 Siriwardana L.H.E.R
+
+class Voter : public User
+{
+	private:
+		string VoterName;
+		string Voteremail;
+		int phonenumber;
+		Feedback *fdbk[];
+		string dob;
+		Vote *vote1;
+	
+		
+		
+	public:
+		Voter();
+		Voter(string Vname, string Vmail, int Vpnumber, string db);		
+		void Vregister();
+		void login();
+		void updateProfile();
+	
+};
+
+void Voter :: Vregister()
+{
+	
+}
+
+void Voter :: login()
+{
+	
+}
+
+void Voter :: updateProfile()
+{
+	
+}
+
+Voter :: Voter()
+{
+	
+}
+
+
+
+   Voter :: Voter(string Vname, string Vmail, int Vpnumber, string db)
+{
+		VoterName = Vname;
+		Voteremail = Vmail;
+		phonenumber = Vpnumber;	
+		dob  = db;
+}
+
+
+
+
+
+
+
+
+// feedback Class and its implementation - IT21211300 Siriwardana L.H.E.R
+class Feedback
+{
+	private:
+			int feedbackid;
+			Voter *Vter1;
+			
+	public:
+			Feedback();
+			Feedback(int fid);
+			void checkreply();
+			void viewfeedback();
+			void submitfeedback();			
+};
+
+
+Feedback::Feedback()
+{
+	feedbackid = 0;
+}
+
+Feedback::Feedback(int fid)
+{
+	feedbackid =  fid;
+}
+
+void Feedback::checkreply()
+{
+	
+}
+
+void Feedback::submitfeedback()
+{
+	
+}
+
+void Feedback::viewfeedback()
+{
+	
+}
+
+
+
+
+//      cotestants page and its implementation- IT21205842  Jayaweera J.R 
+
+class Contestants
+{
+	private:
+	string contestantId;
+	string contestantName;
+	int votenumber;
+	
+	
+	
+	
+	
+	public:
+		void addContestants();
+		void removeContestants();
+	Contestants();
+	Contestants(string cid, string cname, int cvnumber);
+	
+		
+};
+
+
+
+Contestants ::	Contestants()
+{
+	
+}
+
+Contestants :: Contestants(string cid, string cname, int cvnumber)
+{
+	
+	contestantId = cid;
+	contestantName = cname;
+	votenumber = cvnumber;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+// VoteDetails and its implementation JAyaweera J.M.A.U
+
+
+
+
+
+
+class VoteDetails
+{
+	private: 
+	int Quantity;
+	
+	public:
+	voteDetails(); 
+	Contestants *cont1;
+	void catogorizeVote();
+	void CalcTotalCount();
+	
+	
+	
+	
+};
+
+
+VoteDetalis ()
+{
+	
+}
+
+
+void VoteDetails::catogorizeVote()
+{
+	
+}
+
+
+
+
+
+
+// Vote and reults IT21207136 Mendis T.S.P
+class Vote
+{
+	private:
+	int voteId;
+	float timeVoted;
+	Voter *Vter2;
+	VoteDetails *votedtils[3];
+	
+	
+	
+	public:
+		Vote();
+		Vote(int vid , float tVoted);
+		void submitVote();
+		void cancelVote();
+		void includeVotedetails( VoteDetails *VD1,  VoteDetails *VD2,  VoteDetails *VD3 );	
+		
+		
+		
+		
+	
+};
+
+
+
+void Vote::includeVotedetails( VoteDetails *VD1,  VoteDetails *VD2,  VoteDetails *VD3 )
+{
+	votedtils[0] =  VD1;
+	votedtils[1] =  VD2;
+	votedtils[2] =  VD3;
+}
+
+
+
+
+Vote::Vote()
+{
+   voteId=0;
+   timeVoted=0.0;		
+}
+
+
+
+Vote::Vote(  int Vid   , float  tVoted     )
+{
+
+			voteId = Vid;
+			timeVoted = tVoted; 
+}
+
+
+void Vote::submitVote()
+{
+	
+}
+void Vote::cancelVote()
+{
+	
+}
+
+
+
+
+
+class Results
+{
+	private:
+		VoteDetails *vdtls2;
+		
+		
+	public:
+	
+	  void displayResult();
+		
+			
+
+
+	
+};
+
+
+
+
+
+
+
+
+
+
+
+// main program JAyaweera J.M.A.U
+
+int main()
+{
+	User u1;
+	Admin a1;
+	Voter vtr1;
+	Feedback f1;
+	Vote v1;
+	VoteDetails vtdetls;
+	Contestants c1;
+	
+	
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
